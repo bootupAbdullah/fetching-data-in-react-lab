@@ -24,18 +24,20 @@ const AllStarships = async () => {
         // Call each pae with specific endpoint and store in unique vars
         //Page 1 of 'Starships' results
         const starshipsPage1 = await fetch(BASE_URL + page1Endpoint );
-        console.log(starshipsPage1)
         const page1Data = await starshipsPage1.json()
         console.log(page1Data)
         //Page 2 of 'Starships' results
         const starshipsPage2 = await fetch(BASE_URL + page2Endpoint );
         const page2Data = await starshipsPage2.json()
+        console.log(page2Data)
         //Page 3 of 'Starships' results 
         const starshipsPage3 = await fetch(BASE_URL + page3Endpoint );
         const page3Data = await starshipsPage3.json()
+        console.log(page3Data)
         //Page 4 of 'Starships' results
         const starshipsPage4 = await fetch(BASE_URL + page4Endpoint );
         const page4Data = await starshipsPage4.json()
+        console.log(page4Data)
         return {page1Data, page2Data, page3Data, page4Data}
     } catch (err) {
         console.log('There is an error with loading Starship pages: ' + err)
